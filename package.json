@@ -4,7 +4,9 @@
   "description": "nodejs whale project",
   "main": "index.js",
   "scripts": {
-    "download": "nodemon ./download/index.js"
+    "download": "nodemon ./download/index.js",
+    "detail:server": "nodemon ./detail/server/index.js",
+    "detail:client": "nodemon ./detail/client/index.js"
   },
   "keywords": [
     "nodejs",
@@ -13,8 +15,12 @@
   "author": "wtw",
   "license": "MIT",
   "devDependencies": {
+    "easy_sock": "^0.4.1",
     "koa": "^2.14.2",
     "koa-mount": "^4.0.0",
     "koa-static": "^5.0.0"
+  },
+  "dependencies": {
+    "protocol-buffers": "^5.0.0"
   }
 }
