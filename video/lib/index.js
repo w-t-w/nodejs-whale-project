@@ -14,7 +14,7 @@ schema.getQueryType().getFields().comments.resolve = () => {
 
 schema.getMutationType().getFields().praise.resolve = (argv0, {id}) => {
     const comment = comments.find(item => item.id === id);
-    return comment && comment['praiseNum']++;
+    return comment && ++comment['praiseNum'];
 };
 
 module.exports = schema;
