@@ -6,7 +6,8 @@
   "scripts": {
     "download": "nodemon ./download/index.js",
     "detail:server": "nodemon ./detail/server/index.js",
-    "detail:client": "nodemon ./detail/client/index.js"
+    "detail:client": "nodemon ./detail/client/index.js",
+    "video": "nodemon ./video/index.js"
   },
   "keywords": [
     "nodejs",
@@ -17,10 +18,12 @@
   "devDependencies": {
     "easy_sock": "^0.4.1",
     "koa": "^2.14.2",
+    "koa-graphql": "^0.12.0",
     "koa-mount": "^4.0.0",
     "koa-static": "^5.0.0"
   },
   "dependencies": {
+    "graphql": "^16.8.1",
     "protocol-buffers": "^5.0.0"
   }
 }
