@@ -7,7 +7,12 @@
     "download": "nodemon ./download/index.js",
     "detail:server": "nodemon ./detail/server/index.js",
     "detail:client": "nodemon ./detail/client/index.js",
-    "video": "nodemon ./video/index.js"
+    "video": "nodemon ./video/index.js",
+    "list:component": "webpack --config=./list/component/webpack.component.js --color",
+    "list:ssr": "webpack --config=./list/backend/webpack.ssr.js --color",
+    "list:web": "webpack --config=./list/frontend/webpack.config.js --color",
+    "list:backend": "nodemon ./list/backend/server/index.js",
+    "list:client": "nodemon ./list/backend/client/index.js"
   },
   "keywords": [
     "nodejs",
@@ -16,14 +21,24 @@
   "author": "wtw",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "babel-loader": "^9.1.3",
+    "core-js": "^3.33.0",
     "easy_sock": "^0.4.1",
+    "graphql": "^16.8.1",
     "koa": "^2.14.2",
     "koa-graphql": "^0.12.0",
     "koa-mount": "^4.0.0",
-    "koa-static": "^5.0.0"
+    "koa-static": "^5.0.0",
+    "protocol-buffers": "^5.0.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "graphql": "^16.8.1",
-    "protocol-buffers": "^5.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
